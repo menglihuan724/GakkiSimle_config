@@ -15,6 +15,38 @@ spring:
             max-file-size: 100MB
             max-request-size: 100MB
             enabled: true
+
+    datasource:
+        type: com.alibaba.druid.pool.DruidDataSource
+        driverClassName: com.mysql.jdbc.Driver
+        url: jdbc:mysql://localhost:3306/gakkisimle?useUnicode=true&characterEncoding=utf8&characterSetResults=utf8
+        username: root
+        password: 297234
+        initial-size: 50
+        max-active: 120
+        min-idle: 50
+        max-wait: 60000
+        pool-prepared-statements: true
+        max-pool-prepared-statement-per-connection-size: 20
+        time-between-eviction-runs-millis: 60000
+        min-evictable-idle-time-millis: 300000
+        validation-query: SELECT 1 FROM DUAL
+        test-while-idle: true
+        test-on-borrow: false
+        test-on-return: false
+        stat-view-servlet:
+            enabled: true
+            url-pattern: /druid/*
+            login-username: admin
+            login-password: 123456
+        filter:
+            stat:
+                log-slow-sql: true
+                slow-sql-millis: 1000
+                merge-sql: true
+            wall:
+                config:
+                    multi-statement-allow: true        
 # Mybatis配置
 #mybatis:
 mybatis-plus:
@@ -50,41 +82,7 @@ server:
     port: 8081
 
 logging:
-      config: classpath:/log4j2.xml
-
-spring:
-    datasource:
-        type: com.alibaba.druid.pool.DruidDataSource
-        driverClassName: com.mysql.jdbc.Driver
-        url: jdbc:mysql://localhost:3306/gakkisimle?useUnicode=true&characterEncoding=utf8&characterSetResults=utf8
-        username: root
-        password: 297234
-        initial-size: 50
-        max-active: 120
-        min-idle: 50
-        max-wait: 60000
-        pool-prepared-statements: true
-        max-pool-prepared-statement-per-connection-size: 20
-        time-between-eviction-runs-millis: 60000
-        min-evictable-idle-time-millis: 300000
-        validation-query: SELECT 1 FROM DUAL
-        test-while-idle: true
-        test-on-borrow: false
-        test-on-return: false
-        stat-view-servlet:
-            enabled: true
-            url-pattern: /druid/*
-            login-username: admin
-            login-password: 123456
-        filter:
-            stat:
-                log-slow-sql: true
-                slow-sql-millis: 1000
-                merge-sql: true
-            wall:
-                config:
-                    multi-statement-allow: true
-
+      config: classpath:/log4j2.xml    
 
 #系统变量配置
 sys:
