@@ -19,9 +19,9 @@ spring:
         url: jdbc:mysql://127.0.0.1:3306/gakkisimle?useUnicode=true&characterEncoding=utf8&characterSetResults=utf8&&characterSetServer=utf8mb4
         username: root
         password: Menglihuan@724
-        initial-size: 50
-        max-active: 120
-        min-idle: 50
+        initial-size: 5
+        max-active: 10
+        min-idle: 5
         max-wait: 60000
         pool-prepared-statements: true
         max-pool-prepared-statement-per-connection-size: 20
