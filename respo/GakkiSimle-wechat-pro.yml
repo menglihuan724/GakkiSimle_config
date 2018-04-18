@@ -43,7 +43,11 @@ spring:
                 merge-sql: true
             wall:
                 config:
-                    multi-statement-allow: true        
+                    multi-statement-allow: true
+#fegin
+feign:
+  hystrix:
+    enabled: true
 # Mybatis配置
 #mybatis:
 mybatis-plus:
