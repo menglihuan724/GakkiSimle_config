@@ -46,9 +46,13 @@ spring:
                 merge-sql: true
             wall:
                 config:
-                    multi-statement-allow: true        
+                    multi-statement-allow: true    
+#admin
+management:  
+  port: 8086  
+  security:  
+     enabled: false 
 # Mybatis配置
-#mybatis:
 mybatis-plus:
   mapper-locations: classpath:/mapper/**/*.xml
   typeAliasesPackage: com.terry.gakkisimle.IM.mapper
