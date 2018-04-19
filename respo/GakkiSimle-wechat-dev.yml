@@ -1,7 +1,10 @@
 spring:
     # 环境 dev|test|pro
-    #profiles:
-    #active: dev
+    boot:  
+      admin:  
+        client:  
+          prefer-ip: true 
+        url: http://localhost:8089/ # 向服务端注册的地址 
     aop:
       auto: true
     # jackson时间格式化
