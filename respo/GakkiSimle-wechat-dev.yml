@@ -60,7 +60,8 @@ logging:
         org:
             springframework:
                             web:
-                                 servlet: DispatcherServlet:DEBUG                    
+                                 servlet: 
+                                    DispatcherServlet:DEBUG                    
 #admin
 management:  
   port: 8086  
