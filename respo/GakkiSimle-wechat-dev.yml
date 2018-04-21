@@ -54,14 +54,13 @@ spring:
 logging:
     level:
         org:
-            springframework:INFO
+            springframework: INFO
 logging:
     level:
         org:
             springframework:
                             web:
-                                 servlet:
-                                    DispatcherServlet:DEBUG                    
+                                 servlet: DispatcherServlet:DEBUG                    
 #admin
 management:  
   port: 8086  
